@@ -69,8 +69,7 @@ The system provides secure authentication, blood request management, donor regis
 
 ### Database
 
-* SQLite (Development)
-* MySQL (Optional)
+* MySQL
 
 ---
 
@@ -148,7 +147,7 @@ http://127.0.0.1:8000/
 
 ### Login Page
 
-
+<img width="964" height="879" alt="Screenshot 2026-06-16 192233" src="https://github.com/user-attachments/assets/6ea930df-a1c6-4ded-9109-864a878b458e" />
 
 
 ### Registration Page
