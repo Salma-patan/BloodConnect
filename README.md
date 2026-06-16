@@ -140,21 +140,34 @@ http://127.0.0.1:8000/
 
 ## 📷 Screenshots
 
+
 ### Home Page
 
-(Add Screenshot)
+<img width="1919" height="877" alt="Screenshot 2026-06-16 170127" src="https://github.com/user-attachments/assets/5c3257bb-3a60-48cb-9945-d8e3cef966d1" />
+
 
 ### Login Page
 
-(Add Screenshot)
+<img width="1880" height="879" alt="Screenshot 2026-06-16 170222" src="https://github.com/user-attachments/assets/d2f32f99-2da0-44ba-85fe-dea72ad5ea74" />
+
 
 ### Registration Page
 
-(Add Screenshot)
+<img width="1919" height="886" alt="Screenshot 2026-06-16 170159" src="https://github.com/user-attachments/assets/8780337d-ef62-4caa-b01c-ba9903715dc5" />
 
-### Blood Banks Page
+###Donor Dashboard
 
-(Add Screenshot)
+<img width="1898" height="890" alt="Screenshot 2026-06-16 190903" src="https://github.com/user-attachments/assets/dffe38ca-6623-4d60-b60d-83857854454e" />
+
+### Patient Dashboard
+
+<img width="1899" height="887" alt="Screenshot 2026-06-16 190928" src="https://github.com/user-attachments/assets/d7c1e938-baec-40f4-88f4-10bfab28a4bf" />
+
+
+### Camp Page
+
+<img width="1895" height="880" alt="Screenshot 2026-06-16 191020" src="https://github.com/user-attachments/assets/9a64df1e-dd68-4ad5-9338-177911f5ca0c" />
+
 
 ### Blood Camps Page
 
@@ -162,7 +175,8 @@ http://127.0.0.1:8000/
 
 ### Admin Dashboard
 
-(Add Screenshot)
+<img width="1919" height="883" alt="Screenshot 2026-06-16 190954" src="https://github.com/user-attachments/assets/ae18b838-a948-4be2-afeb-4b1c69cc1f5c" />
+
 
 ---
 
