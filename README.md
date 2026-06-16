@@ -143,17 +143,18 @@ http://127.0.0.1:8000/
 
 ### Home Page
 
-<img width="1919" height="877" alt="Screenshot 2026-06-16 170127" src="https://github.com/user-attachments/assets/5c3257bb-3a60-48cb-9945-d8e3cef966d1" />
+<img width="1899" height="860" alt="Screenshot 2026-06-16 190511" src="https://github.com/user-attachments/assets/7edd158f-01aa-43b5-848f-6c97aa93953e" />
 
 
 ### Login Page
 
-<img width="1880" height="879" alt="Screenshot 2026-06-16 170222" src="https://github.com/user-attachments/assets/d2f32f99-2da0-44ba-85fe-dea72ad5ea74" />
+<img width="1896" height="883" alt="Screenshot 2026-06-16 190541" src="https://github.com/user-attachments/assets/52fc94a3-baa9-4cd2-b53a-15c9a362dd34" />
 
 
 ### Registration Page
 
-<img width="1919" height="886" alt="Screenshot 2026-06-16 170159" src="https://github.com/user-attachments/assets/8780337d-ef62-4caa-b01c-ba9903715dc5" />
+<img width="1896" height="886" alt="Screenshot 2026-06-16 190526" src="https://github.com/user-attachments/assets/2b805be3-0b5a-44ee-b123-d5bee1ec1f2a" />
+
 
 ###Donor Dashboard
 
@@ -164,14 +165,17 @@ http://127.0.0.1:8000/
 <img width="1899" height="887" alt="Screenshot 2026-06-16 190928" src="https://github.com/user-attachments/assets/d7c1e938-baec-40f4-88f4-10bfab28a4bf" />
 
 
-### Camp Page
+### Blood Camp Page
 
 <img width="1895" height="880" alt="Screenshot 2026-06-16 191020" src="https://github.com/user-attachments/assets/9a64df1e-dd68-4ad5-9338-177911f5ca0c" />
 
+### Patient request for blood to donor
 
-### Blood Camps Page
+<img width="1898" height="887" alt="Screenshot 2026-06-16 191752" src="https://github.com/user-attachments/assets/c40f7904-8698-4f37-976c-0501c357979b" />
 
-(Add Screenshot)
+### Rewards for donor
+
+<img width="1884" height="857" alt="Screenshot 2026-06-16 191914" src="https://github.com/user-attachments/assets/714ab2da-2c43-4aa8-a4aa-4e274e1edc2e" />
 
 ### Admin Dashboard
 
