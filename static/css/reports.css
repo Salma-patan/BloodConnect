@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f6f9;
+    font-family:'Poppins', sans-serif;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content{
+    margin-left:50px;
+    width:100%;
+    padding:40px;
+}
+
+.main-content h2{
+    color:#b30000;
+    font-weight:700;
+}
+
+/* CHART BOX */
+
+.chart-box{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    height:450px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.chart-title{
+    margin-bottom:20px;
+    font-weight:600;
+    color:#444;
+}
+
+canvas{
+    width:100% !important;
+    height:350px !important;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+        position:relative;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .chart-box{
+        height:auto;
+    }
+
+    canvas{
+        height:300px !important;
+    }
+
+}

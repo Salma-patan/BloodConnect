@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+}
+/* Main */
+
+.flex-grow-1{
+    padding:30px;
+}
+
+/* Card */
+
+.card{
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* Top Banner */
+
+.top{
+    height:180px;
+    background:linear-gradient(135deg,#ff4b4b,#e60023);
+}
+
+/* Profile Content */
+
+.profile-content{
+    text-align:center;
+    padding:40px 20px 20px;
+}
+
+.profile-content h2{
+    font-weight:700;
+    overflow: visible;
+    margin-top:15px;
+    color:#222;
+}
+
+.card{
+    border:none;
+    border-radius:25px;
+    background:white;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    overflow: visible;
+}
+
+
+.blood{
+    display:inline-block;
+    background:#ffe5e5;
+    color:#e60023;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+/* Details */
+
+.details{
+    padding:35px;
+}
+
+.row{
+    background:#fafafa;
+    margin-bottom:15px;
+    color: #e63946;
+    padding:18px 20px;
+    border-radius:15px;
+    align-items:center;
+    transition:0.3s;
+}
+
+.row:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.label{
+    font-weight:600;
+    color:#b51414;
+}
+
+.value{
+    text-align:right;
+    color:#222;
+    font-weight:500;
+}
+.img-fluid{
+    background: white;
+}
+
+/* Button */
+
+.btn-danger{
+    background:#e60023;
+    border:none;
+    padding:12px 30px;
+    border-radius:12px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-danger:hover{
+    background:#c4001d;
+    transform:scale(1.03);
+}

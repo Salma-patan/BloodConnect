@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Blood Banks</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="{% static 'css/donor_page.css' %}">
+
+</head>
+
+<body class="bg-light">
+     <div class="d-flex">
+
+    <!-- ================= SIDEBAR ================= -->
+    <div class="sidebar">
+
+        <div class="logo text-center mb-4">
+
+            <img src="{% static 'images/bloodlogo1.png' %}"
+                 width="70"
+                 height="70">
+
+            <h4 class="mt-2">
+
+                Blood Connect
+
+            </h4>
+
+        </div>
+
+        <a href="{% url 'adminpage' %}">
+
+            Dashboard
+
+        </a>
+
+        <a href="{% url 'donor_details' %}">
+
+            Donor Details
+
+        </a>
+
+
+        <a href="{% url 'patient_details' %}">
+
+            Patient Details
+
+        </a>
+         <a href="{% url 'blood_banks' %}">Blood Banks</a>
+        <a href="{% url 'admin_requests' %}">
+
+            Blood Donations
+
+        </a>
+
+        <a href="{% url 'admin_reports' %}">
+
+            Reports
+
+        </a>
+        <a href="{% url 'admin_notifications' %}">Notification</a>
+
+        <a href="{% url 'user_logout' %}">
+
+            Logout
+
+        </a>
+
+    </div>
+
+
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-danger mb-4">
+
+            Blood Banks Management
+
+        </h2>
+
+        <!-- ADD FORM -->
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+
+                    <input type="text"
+                           name="bank_name"
+                           class="form-control"
+                           placeholder="Blood Bank Name"
+                           required>
+
+                </div>
+
+                <div class="col-md-2 mb-3">
+
+                    <input type="text"
+                           name="location"
+                           class="form-control"
+                           placeholder="Location"
+                           required>
+
+                </div>
+
+                <div class="col-md-2 mb-3">
+
+                    <input type="text"
+                           name="contact"
+                           class="form-control"
+                           placeholder="Contact"
+                           required>
+
+                </div>
+
+                <div class="col-md-2 mb-3">
+
+                    <select name="bloodgroup"
+                            class="form-select"
+                            required>
+
+                        <option value="">
+                            Select Group
+                        </option>
+
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-1 mb-3">
+
+                    <input type="number"
+                           name="units_available"
+                           class="form-control"
+                           placeholder="Units"
+                           required>
+
+                </div>
+
+                <div class="col-md-2 mb-3">
+
+                    <button type="submit"
+                            class="btn btn-danger w-100">
+
+                        Add
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="card shadow p-4 mt-4">
+
+        <h4 class="text-danger mb-3">
+
+            Available Blood Banks
+
+        </h4>
+
+        <table class="table table-hover table-bordered">
+
+            <thead class="table-danger">
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Bank Name</th>
+                    <th>Location</th>
+                    <th>Blood Group</th>
+                    <th>Units</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for b in banks %}
+
+                <tr>
+
+                    <td>{{ forloop.counter }}</td>
+
+                    <td>{{ b.bank_name }}</td>
+
+                    <td>{{ b.location }}</td>
+
+                    <td>{{ b.bloodgroup }}</td>
+
+                    <td>{{ b.units_available }}</td>
+
+                    <td>{{ b.contact }}</td>
+
+                    <td>
+
+                        <a href="{% url 'delete_blood_bank' b.id %}"
+                           class="btn btn-sm btn-danger">
+
+                            Delete
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% empty %}
+
+                <tr>
+
+                    <td colspan="7"
+                        class="text-center">
+
+                        No Blood Banks Available
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

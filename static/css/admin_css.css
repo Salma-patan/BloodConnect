@@ -1,0 +1,215 @@
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fb;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    padding:20px;
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+
+    font-weight:700;
+    color:#b30000;
+
+}
+
+h5{
+
+    color:#c4001d;
+    font-weight:600;
+
+}
+
+.text-muted{
+
+    font-size:15px;
+
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.card{
+
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    background:white;
+    position:relative;
+    transition:0.3s ease-in-out;
+
+}
+
+
+/* Card Hover */
+
+.card:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(179,0,0,0.25);
+    border:1px solid rgba(179,0,0,0.2);
+
+}
+
+
+/* Top Red Line */
+
+.card::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+    background:#b30000;
+    transition:0.4s;
+
+}
+
+.card:hover::before{
+
+    width:100%;
+
+}
+
+
+/* =========================
+   CARD IMAGES
+========================= */
+
+.card img{
+
+    object-fit:contain;
+
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card h3{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.card p{
+
+    font-size:15px;
+    color:#555;
+
+}
+
+
+/* =========================
+   TABLE SECTION
+========================= */
+
+table{
+
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+
+}
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table th{
+
+    background:#f8f9fa;
+    font-weight:600;
+    color:#333;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#fff4f4;
+
+}
+
+
+/* =========================
+   TABLE CARDS
+========================= */
+
+.card.shadow-sm{
+
+    border-radius:15px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-danger{
+
+    background:#b30000;
+    border:none;
+
+}
+
+.btn-danger:hover{
+
+    background:#8c0000;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .card{
+
+        margin-bottom:20px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}

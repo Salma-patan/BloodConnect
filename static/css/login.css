@@ -1,0 +1,22 @@
+body {
+    background-image: url('../images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display:flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.container mt-5{
+    align-items: right;
+    display: flex;
+    justify-content: right;
+    min-width: 200px;
+}
+.login-box {
+    width: 400px;
+    padding: 20px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camp Registration</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+    <h3>Register For Blood Camp</h3>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <!-- DONOR DETAILS -->
+
+        <div class="mb-2">
+            <label>Donor Name</label>
+
+            <input type="text"
+                   value="{{ donor.first_name }}"
+                   class="form-control"
+                   readonly>
+        </div>
+
+        <div class="mb-2">
+            <label>Phone</label>
+
+            <input type="text"
+                   name="phone"
+                   value="{{ donor.phone }}"
+                   class="form-control">
+        </div>
+
+        <div class="mb-2">
+            <label>Blood Group</label>
+
+            <input type="text"
+                   name="bloodgroup"
+                   value="{{ donor.bloodgroup }}"
+                   class="form-control">
+        </div>
+
+        <!-- CAMP DETAILS -->
+
+        <div class="mb-2">
+            <label>Camp Name</label>
+
+            <input type="text"
+                   name="camp_name"
+                   class="form-control"
+                   required>
+        </div>
+
+        <div class="mb-2">
+            <label>Location</label>
+
+            <input type="text"
+                   name="location"
+                   class="form-control"
+                   required>
+        </div>
+
+        <div class="mb-2">
+            <label>Date</label>
+
+            <input type="date"
+                   name="date"
+                   class="form-control"
+                   required>
+        </div>
+
+        <div class="mb-2">
+            <label>Time</label>
+
+            <input type="time"
+                   name="time"
+                   class="form-control"
+                   required>
+        </div>
+
+        <button type="submit"
+                class="btn btn-danger">
+
+            Register Camp
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

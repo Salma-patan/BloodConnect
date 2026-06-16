@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">
+            <img src="{% static 'images/blood.png' %}" width="35" height="35">
+            BloodConnect
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Find Donors</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Request Blood</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blood Camps</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+
+            <div class="d-flex">
+                <a class="btn btn-danger me-2" href="{% url 'register' %}">Register</a>
+                <a class="btn btn-outline-danger" href="{% url 'login' %}">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>

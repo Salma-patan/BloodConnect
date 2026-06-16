@@ -1,0 +1,217 @@
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.flex-grow-1{
+
+    background:#f5f7fb;
+    min-height:100vh;
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    border-radius:0 0 15px 15px;
+
+}
+
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+h2{
+
+    font-weight:700;
+    color:#b30000;
+
+}
+
+span{
+
+    color:#c4001d;
+    font-weight:600;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    background:white;
+    position:relative;
+    transition:0.3s ease-in-out;
+
+}
+
+
+/* Card Hover */
+
+.card:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(179,0,0,0.25);
+
+}
+
+
+/* Top Border Animation */
+
+.card::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+    background:#b30000;
+    transition:0.4s;
+
+}
+
+.card:hover::before{
+
+    width:100%;
+
+}
+
+
+/* =========================
+   CARD IMAGES
+========================= */
+
+.rounded-circle{
+
+    width:80px;
+    height:80px;
+    object-fit:cover;
+
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card h2{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.card p{
+
+    font-size:15px;
+    color:#555;
+
+}
+
+.card h5{
+
+    font-weight:600;
+    color:#333;
+
+}
+
+
+/* =========================
+   TABLE SECTION
+========================= */
+
+table{
+
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+
+}
+
+.table th{
+
+    background:#f8f9fa;
+    font-weight:600;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#fff4f4;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-danger{
+
+    background:#b30000;
+    border:none;
+    border-radius:8px;
+
+}
+
+.btn-danger:hover{
+
+    background:#8c0000;
+
+}
+
+.btn-danger a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+
+/* =========================
+   FOOTER CARD
+========================= */
+
+.card img.img-fluid{
+
+    object-fit:contain;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .card{
+
+        margin-bottom:20px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}

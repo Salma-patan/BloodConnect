@@ -1,0 +1,380 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="{% static 'css/donor_page.css' %}">
+          <link rel="stylesheet" href="{% static 'css/admin_css.css' %}">
+
+</head>
+
+<body>
+
+<div class="d-flex">
+
+    <!-- ================= SIDEBAR ================= -->
+    <div class="sidebar">
+
+        <div class="logo text-center mb-4">
+
+            <img src="{% static 'images/bloodlogo1.png' %}"
+                 width="70"
+                 height="70">
+
+            <h4 class="mt-2">
+
+                Blood Connect
+
+            </h4>
+
+        </div>
+
+        <a href="{% url 'adminpage' %}">
+
+            Dashboard
+
+        </a>
+
+        <a href="{% url 'donor_details' %}">
+
+            Donor Details
+
+        </a>
+    
+        <a href="{% url 'patient_details' %}">
+
+            Patient Details
+
+        </a>
+         <a href="{% url 'blood_banks' %}">Blood Banks</a>
+        <a href="{% url 'admin_requests' %}">
+
+            Blood Donations
+
+        </a>
+
+        <a href="{% url 'admin_reports' %}">
+
+            Reports
+
+        </a>
+        <a href="{% url 'admin_notifications' %}">Notification</a>
+
+        <a href="{% url 'user_logout' %}">
+
+            Logout
+
+        </a>
+
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <div class="container p-4">
+
+        <!-- Heading -->
+        <h1 class="mb-2">
+
+            Admin Dashboard
+
+        </h1>
+
+        <p class="text-muted">
+
+            Welcome back, admin!
+
+        </p>
+
+        <!-- ================= CARDS ================= -->
+        <div class="row g-4">
+
+            <!-- Total Donors -->
+            <div class="col-md-3">
+
+                <div class="card p-4 shadow-sm h-100 text-center">
+
+                    <img src="{% static 'images/bloodcommunity.png' %}"
+                         width="70"
+                         class="mx-auto">
+
+                    <h3 class="text-primary mt-3">
+
+                        {{ donor.count }}
+
+                    </h3>
+
+                    <p>
+
+                        Total Donors
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Total Patients -->
+            <div class="col-md-3">
+
+                <div class="card p-4 shadow-sm h-100 text-center">
+
+                    <img src="{% static 'images/cardblood.png' %}"
+                         width="70"
+                         class="mx-auto">
+
+                    <h3 class="text-primary mt-3">
+
+                        {{ patient.count }}
+
+                    </h3>
+
+                    <p>
+
+                        Total Patients
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Blood Requests -->
+            <div class="col-md-3">
+
+                <div class="card p-4 shadow-sm h-100 text-center">
+
+                    <img src="{% static 'images/bloodicon.jpg' %}"
+                         width="70"
+                         class="mx-auto">
+
+                    <h3 class="text-primary mt-3">
+
+                        {{ blood_requests.count }}
+
+                    </h3>
+
+                    <p>
+
+                        Total Blood Donation requests
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Total Camps -->
+            <div class="col-md-3">
+
+                <div class="card p-4 shadow-sm h-100 text-center">
+
+                    <img src="{% static 'images/calendar.png' %}"
+                         width="70"
+                         class="mx-auto">
+
+                    <h3 class="text-primary mt-3">
+
+                        {{ camps.count }}
+
+                    </h3>
+
+                    <p>
+
+                        Total Camps
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= TABLES ================= -->
+        <div class="row mt-5">
+
+            <!-- Recent Blood Donations -->
+            <div class="col-md-6">
+
+                <div class="card shadow-sm p-3">
+
+                    <h5 class="mb-3 text-danger">
+
+                        Recent Blood Donations
+
+                    </h5>
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+
+                        <tr>
+
+                            <th>#</th>
+                            <th>Blood Group</th>
+                            <th>Donor Name</th>
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        {% for d in donations %}
+
+                        <tr>
+
+                            <td>
+
+                                {{ forloop.counter }}
+
+                            </td>
+
+                            <td>
+
+                                {{ d.bloodgroup }}
+
+                            </td>
+
+                            <td>
+
+                                {{ d.first_name }} {{ d.last_name }}
+
+                            </td>
+
+                        </tr>
+
+                        {% empty %}
+
+                        <tr>
+
+                            <td colspan="3"
+                                class="text-center">
+
+                                No donations found
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- Upcoming Blood Camps -->
+            <div class="col-md-6">
+
+                <div class="card shadow-sm p-3">
+
+                    <h5 class="mb-3 text-danger">
+
+                        Upcoming Blood Camps
+
+                    </h5>
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+
+                        <tr>
+
+                            <th>S. No</th>
+                            <th>Camp Name</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Time</th>
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        {% for c in camps %}
+
+                        <tr>
+
+                            <td>
+
+                                {{ forloop.counter }}
+
+                            </td>
+
+                            <td>
+
+                                {{ c.camp_name }}
+
+                            </td>
+
+                            <td>
+
+                                {{ c.location }}
+
+                            </td>
+
+                            <td>
+
+                                {{ c.date }}
+
+                            </td>
+
+                            <td>
+
+                                {{ c.time }}
+
+                            </td>
+
+                        </tr>
+
+                        {% empty %}
+
+                        <tr>
+
+                            <td colspan="5"
+                                class="text-center">
+
+                                No camps available
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

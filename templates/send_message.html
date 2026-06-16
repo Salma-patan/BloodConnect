@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Send Message</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{% static 'css/donor_page.css' %}">
+
+</head>
+
+<body>
+
+<div class="d-flex">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+
+        <div class="logo text-center mb-4">
+
+            <img src="{% static 'images/bloodlogo1.png' %}"
+                 width="70"
+                 height="70">
+
+            <h4 class="mt-2">Blood Connect</h4>
+
+        </div>
+
+        <a href="{% url 'patientpage' %}">Home</a>
+
+        <a href="#">Appointments</a>
+
+        <a href="#">Find Donors</a>
+
+        <a href="{% url 'request_blood' %}">
+            Request Blood
+        </a>
+
+        <a href="{% url 'donations' %}">
+            Donations
+        </a>
+
+        <a href="{% url 'availability' %}">
+            Availability
+        </a>
+
+        <a href="{% url 'patient_profile' %}">
+            Profile
+        </a>
+
+        <a href="{% url 'user_logout' %}">
+            Logout
+        </a>
+
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+
+    <div class="container p-5">
+
+        <div class="card shadow p-4">
+
+            <h3 class="text-danger mb-4">
+
+                Send Message To Donor
+
+            </h3>
+
+            <!-- DONOR DETAILS -->
+
+            <div class="mb-4">
+
+                <h5>
+                    Donor Name :
+                    {{ donor.first_name }} {{ donor.last_name }}
+                </h5>
+
+                <h6>
+                    Blood Group :
+                    {{ donor.bloodgroup }}
+                </h6>
+
+                <h6>
+                    District :
+                    {{ donor.district }}
+                </h6>
+
+                <h6>
+                    Phone :
+                    {{ donor.phone }}
+                </h6>
+
+            </div>
+
+            <!-- MESSAGE FORM -->
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <!-- Patient Name -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Patient Name
+                    </label>
+
+                    <input type="text"
+                           name="patient_name"
+                           class="form-control"
+                           required>
+
+                </div>
+
+                <!-- Subject -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Subject
+                    </label>
+
+                    <input type="text"
+                           name="subject"
+                           class="form-control"
+                           placeholder="Emergency Blood Request"
+                           required>
+
+                </div>
+
+                <!-- Message -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Message
+                    </label>
+
+                    <textarea name="message"
+                              rows="5"
+                              class="form-control"
+                              placeholder="Type your emergency message..."
+                              required></textarea>
+
+                </div>
+
+                <!-- BUTTONS -->
+
+                <button type="submit"
+                        class="btn btn-danger">
+
+                    Send Message
+
+                </button>
+
+                <a href="{% url 'availability' %}"
+                   class="btn btn-secondary">
+
+                    Back
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

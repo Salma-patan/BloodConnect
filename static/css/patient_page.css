@@ -1,0 +1,196 @@
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fb;
+}
+
+.name{
+    color: #c4001d;
+}
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container-fluid{
+    padding:20px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2{
+    font-weight:700;
+    color:#b30000;
+}
+
+h5{
+    color:#c4001d;;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    background:white;
+    position:relative;
+    transition:0.3s ease-in-out;
+}
+
+/* Card Hover Effect */
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(179,0,0,0.25);
+    border:1px solid rgba(179,0,0,0.2);
+}
+
+
+/* Top Highlight Line */
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+    background:#b30000;
+    transition:0.4s;
+}
+
+.card:hover::before{
+    width:100%;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.rounded-circle{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card h3{
+    font-size:30px;
+    font-weight:700;
+}
+
+.card p{
+    font-size:15px;
+}
+
+.card a{
+    font-size:14px;
+    text-decoration:none;
+}
+
+
+/* =========================
+   TABLE SECTION
+========================= */
+
+table{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.table th{
+    background:#f8f9fa;
+    font-weight:600;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge{
+    padding:7px 10px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions .card{
+    cursor:pointer;
+}
+
+.quick-actions img{
+    transition:0.3s;
+}
+
+.quick-actions .card:hover img{
+    transform:scale(1.1);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-danger{
+    background:#b30000;
+    border:none;
+}
+
+.btn-danger:hover{
+    background:#8c0000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-left:240px;
+    background:#111;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+footer p{
+    margin:0;
+    font-size:15px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .container-fluid{
+        margin-left:0;
+    }
+
+    footer{
+        margin-left:0;
+    }
+}

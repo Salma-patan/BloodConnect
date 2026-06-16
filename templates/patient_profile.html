@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Patient Profile</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- External CSS -->
+       
+    <link rel="stylesheet"
+          href="{% static 'css/donor_page.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'css/donor_profile.css' %}">
+
+</head>
+
+<body>
+
+<div class="d-flex">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo text-center mb-4">
+
+            <img src="{% static 'images/bloodlogo1.png' %}"
+                 alt="Blood Connect Logo"
+                 width="70"
+                 height="70">
+
+            <h4 class="mt-2">
+                Blood Connect
+            </h4>
+
+        </div>
+
+        <!-- MENU -->
+
+        <a href="{% url 'patientpage' %}">
+            Home
+        </a>
+
+        <a href="{% url 'find_donors' %}">
+            Find Donors
+        </a>
+
+        <a href="{% url 'availability' %}">
+            Availability
+        </a>
+        <a href="{% url 'patient_request' %}">Request Blood</a>
+
+
+        <a href="{% url 'patient_notifications' %}">
+            Notifications
+        </a>
+
+        <a href="{% url 'patient_profile' %}">
+            Profile
+        </a>
+
+        <a href="{% url 'user_logout' %}">
+            Logout
+        </a>
+
+        <!-- FOOTER -->
+
+        <div class="sidebar-footer text-center">
+
+            <img src="{% static 'images/navside.png' %}"
+                 alt="Footer Image"
+                 class="img-fluid">
+
+            <h5 class="mt-3">
+                Stay Strong!
+            </h5>
+
+            <p>
+                Every drop of blood matters
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-grow-1">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+
+            <div class="container-fluid">
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- PROFILE SECTION -->
+        <div class="main-content">
+
+            <div class="profile-card">
+
+                <h2>
+                    Patient Profile
+                </h2>
+
+                <!-- PROFILE CONTENT -->
+
+                <div class="profile-content">
+
+                    <img src="https://i.pravatar.cc/200"
+                         class="img-fluid rounded-circle"
+                         alt="profile">
+
+                    <h2>
+
+                        {{ patient.first_name }} {{ patient.last_name }}
+
+                    </h2>
+
+                    <!-- BLOOD GROUP -->
+
+                    <div class="blood">
+
+                        {{ patient.bloodgroup }}
+
+                    </div>
+
+                </div>
+
+                <!-- DETAILS -->
+
+                <div class="details">
+
+                    <div class="row">
+
+                        <div class="label">
+                            First Name:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.first_name }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Last Name:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.last_name }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Email:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.email }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Phone Number:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.phone }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Gender:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.gender }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Country:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.country }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            State:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.state }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            District:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.district }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            City/Town:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.city_town }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Pincode:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.pincode }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Person:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.person }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Blood Group:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.bloodgroup }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="label">
+                            Date Of Birth:
+                        </div>
+
+                        <div class="value">
+
+                            {{ patient.dob }}
+
+                        </div>
+
+                    </div>
+
+                    <!-- BUTTON -->
+
+                    <div class="text-center">
+
+                        <a href="{% url 'edit_patient_profile' %}" class="btn btn-danger">
+                               Edit Profile
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
