@@ -148,7 +148,7 @@ http://127.0.0.1:8000/
 
 ### Login Page
 
-<img width="1896" height="883" alt="Screenshot 2026-06-16 190541" src="https://github.com/user-attachments/assets/52fc94a3-baa9-4cd2-b53a-15c9a362dd34" />
+
 
 
 ### Registration Page
@@ -158,7 +158,8 @@ http://127.0.0.1:8000/
 
 ###Donor Dashboard
 
-<img width="1898" height="890" alt="Screenshot 2026-06-16 190903" src="https://github.com/user-attachments/assets/dffe38ca-6623-4d60-b60d-83857854454e" />
+<img width="1893" height="894" alt="Screenshot 2026-06-16 192113" src="https://github.com/user-attachments/assets/7c0328ba-acb2-4826-b093-68e63c3068d1" />
+
 
 ### Patient Dashboard
 
